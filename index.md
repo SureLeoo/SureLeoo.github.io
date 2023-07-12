@@ -831,18 +831,18 @@
 
 `AutoCAD` 本身可通过 `光栅图像` 或者 `OLE` 加载栅格数据，但这两种方式都有局限性，面对动辄几十上百G的栅格数据显得捉襟见肘，较为主流的方式是将影像裁剪为小图幅瓦片，按需要加载，但这种方式在某些场景下操作较为繁琐，这时候可通过本软件 `大影像` 来实现加载，目前支持的格式如下：<a id="支持的栅格格式"></a>
 
-| 名称          | 后缀                    | 读                                                           | 写                                                           | 说明 |
-| ------------- | ----------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
-| `GTIFF`       | `tif` `tiff`            | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/0ok.png?lastModify=1688955285?lastModify=1688975983) | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/0ok.png?lastModify=1688955285?lastModify=1688975983) |      |
-| `HFA`         | `img` `ige` `rde` `rrd` | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/0ok.png?lastModify=1688955285?lastModify=1688975983) | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/0ok.png?lastModify=1688955285?lastModify=1688975983) |      |
-| `GPKG`        | `gpkg`                  | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/0ok.png?lastModify=1688955285?lastModify=1688975983) | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/0ok.png?lastModify=1688955285?lastModify=1688975983) |      |
-| `VRT`         | `vrt`                   | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/0ok.png?lastModify=1688955285?lastModify=1688975983) | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/0ok.png?lastModify=1688955285?lastModify=1688975983) |      |
-| `JP2OpenJPEG` | `jp2` `j2k`             | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/0ok.png?lastModify=1688955285?lastModify=1688975983) | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/0ok.png?lastModify=1688955285?lastModify=1688975983) |      |
-| `PNG`         | `png`                   | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/0ok.png?lastModify=1688955285?lastModify=1688975983) | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/0ok.png?lastModify=1688955285?lastModify=1688975983) |      |
-| `Rasterlite`  | `sqlite`                | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/0ok.png?lastModify=1688955285?lastModify=1688975983) | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/0ok.png?lastModify=1688955285?lastModify=1688975983) |      |
-| `MBTile`      | `mbtiles`               | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/0ok.png?lastModify=1688955285?lastModify=1688975983) | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/0ok.png?lastModify=1688955285?lastModify=1688975983) |      |
-| `MFF`         | `hdr`                   | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/0ok.png?lastModify=1688955285?lastModify=1688975983) | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/0ok.png?lastModify=1688955285?lastModify=1688975983) |      |
-| `EHDR`        | `bil`                   | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/0ok.png?lastModify=1688955285?lastModify=1688975983) | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/0ok.png?lastModify=1688955285?lastModify=1688975983) |      |
+| 名称          | 后缀                    | 读                         | 写                         | 说明 |
+| ------------- | ----------------------- | -------------------------- | -------------------------- | ---- |
+| `GTIFF`       | `tif` `tiff`            | ![image](./assets/0ok.png) | ![image](./assets/0ok.png) |      |
+| `HFA`         | `img` `ige` `rde` `rrd` | ![image](./assets/0ok.png) | ![image](./assets/0ok.png) |      |
+| `GPKG`        | `gpkg`                  | ![image](./assets/0ok.png) | ![image](./assets/0ok.png) |      |
+| `VRT`         | `vrt`                   | ![image](./assets/0ok.png) | ![image](./assets/0ok.png) |      |
+| `JP2OpenJPEG` | `jp2` `j2k`             | ![image](./assets/0ok.png) | ![image](./assets/0ok.png) |      |
+| `PNG`         | `png`                   | ![image](./assets/0ok.png) | ![image](./assets/0ok.png) |      |
+| `Rasterlite`  | `sqlite`                | ![image](./assets/0ok.png) | ![image](./assets/0ok.png) |      |
+| `MBTile`      | `mbtiles`               | ![image](./assets/0ok.png) | ![image](./assets/0ok.png) |      |
+| `MFF`         | `hdr`                   | ![image](./assets/0ok.png) | ![image](./assets/0ok.png) |      |
+| `EHDR`        | `bil`                   | ![image](./assets/0ok.png) | ![image](./assets/0ok.png) |      |
 
 > `大影像` 并非指影像非得要多大，只是系列功能的名称，通过这些功能还可以分割和合并栅格，构建影像金字塔等，结合CAD本身的 `光栅图像` 功能，实现更全面的栅格数据支持。
 
