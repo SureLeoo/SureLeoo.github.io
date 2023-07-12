@@ -1,38 +1,37 @@
 ## 简介<a id="简介"></a>
-![image](./assets/安装界面.png)
 
 `SpatialBox For AutoCAD` 是一款基于 AutoCAD 的 GIS 扩展插件，围绕数据格式转换、属性管理、空间拓扑、栅格扩展等方面，系统性增强 AutoCAD 的地理数据处理能力。
 
 ### 功能模块<a id="功能模块"></a>
 
 - 导入导出：支持 `SHP`，`GDB`，`KML`，`JSON`，`Excel` 等数据的加载和导出，支持弧，多部件和属性；
-- 属性管理：具备完整的字段和属性管理功能，可执行多功能的字段计算器，属性选择，属性连接等；
-- 空间拓扑：支持拓扑验证，拓扑检查，并可进行空间连接，空间选择等；
+- 空间分析：支持拓扑验证，拓扑检查，并可进行空间连接，空间选择等；
 - 栅格工具：支持批量加载光栅图像，加载超大影像，影像合并拆分转换，在线地图浏览，下载，并支持自定义图源；
+- 属性管理：具备完整的字段和属性管理功能，可执行多功能的字段计算器，属性选择，属性连接等；
 - 编辑工具：提供常规的一些点，线，面编辑功能；
 - 标注注记：提供字段标注，字段注记，长度标注等功能，并可进行动态标注；
-- 通用工具：系列工具的集合，诸如批量打印，文件合并拆分等；
+- 通用工具：系列工具的集合，诸如裁剪、批量打印输出、批量合并拆分等；
 
 ### 运行环境<a id="运行环境"></a>
 
 | <span style="font-weight:normal">操作系统</span> | <span style="font-weight:normal">Windows7 - Windows11</span> |
 | :----------------------------------------------: | :----------------------------------------------------------: |
-|                     AutoCAD                      |                AutoCAD 2013-2024 （32-64位）                 |
+|                     AutoCAD                      |                  AutoCAD 2013-2024 （x64）                   |
 |                     运行框架                     |                      NET Framework 4.0                       |
 
 ### 安装和卸载<a id="安装和卸载"></a>
 
 软件提供绿色自解压安装包，默认安装目录为 `D:\SpatialBox`，若要卸载删除该目录即可。
 
-![image](C:\LeoCode\HtCadTool\HelpMd\assets\image-20230708171534298.png)
+![image](./assets/0安装界面.png)
 
 > 安装目录下的 `user` 文件夹可能有您自己保存的数据，删除时请注意检查备份。
 
 ### 启用和停用<a id="启用和停用"></a>
 
-安装后显示 `SpatialBox启动器` 界面，![image-20230708173023693](C:\LeoCode\HtCadTool\HelpMd\assets\image-20230708173023693.png)可启用、停用插件，![image-20230708173240043](C:\LeoCode\HtCadTool\HelpMd\assets\image-20230708173240043.png)可快速打开相应版本的 CAD。
+安装后显示 `SpatialBox启动器` 界面，![image-20230708173023693](./assets/0启动器_开关.png)可启用、停用插件，![image-20230708173240043](./assets/0启动器_打开CAD.png)可快速打开相应版本的 CAD。
 
-![image-20230708173129275](C:\LeoCode\HtCadTool\HelpMd\assets\image-20230708173129275.png)
+![image](./assets/0启动器.png)
 
 > - 当启动器左下角出现版本更新提示时，点击可查看和下载新版本。
 >
@@ -40,7 +39,7 @@
 
 ### 技术支持<a id="技术支持"></a>
 
-![image-20230709113354597](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709113354597.png)
+![image-20230709113354597](./assets/0二维码.png)
 
 - [更新日志](https://gitee.com/sureleo/spatialbox/raw/master/UpdateLog)
 - [下载链接](http://spatialbox.ysepan.com/)
@@ -51,34 +50,34 @@
 
 导入导出是与外部数据交互的主要方式，目前支持的矢量格式如下：<a id="支持的矢量格式"></a>
 
-| 名称                                   | 后缀                    | 读                                             | 写                                             | 说明           |
-| -------------------------------------- | ----------------------- | ---------------------------------------------- | ---------------------------------------------- | -------------- |
-| ESRI Shapefile                         | `shp` `shx` `dbf` `cpg` | ![](C:\LeoCode\HtCadTool\HelpMd\assets/ok.png) | ![](C:\LeoCode\HtCadTool\HelpMd\assets/ok.png) |                |
-| ESRI File Geodatabase (FileGDB)        | `gdb`                   | ![](C:\LeoCode\HtCadTool\HelpMd\assets/ok.png) | ![](C:\LeoCode\HtCadTool\HelpMd\assets/ok.png) |                |
-| Keyhole Markup Language                | `kml` `kmz`             | ![](C:\LeoCode\HtCadTool\HelpMd\assets/ok.png) | ![](C:\LeoCode\HtCadTool\HelpMd\assets/ok.png) |                |
-| Excel                                  | `xlsx` `xls`            | ![](C:\LeoCode\HtCadTool\HelpMd\assets/ok.png) | ![](C:\LeoCode\HtCadTool\HelpMd\assets/ok.png) | 导出格式为xlsx |
-| GeoJSON                                | `json` `geojson`        | ![](C:\LeoCode\HtCadTool\HelpMd\assets/ok.png) | ![](C:\LeoCode\HtCadTool\HelpMd\assets/ok.png) |                |
-| Personal GeoDatabase（个人地理数据库） | `mdb`                   | ![](C:\LeoCode\HtCadTool\HelpMd\assets/ok.png) |                                                |                |
-| Comma Separated Value（逗号分隔文件）  | `csv`                   | ![](C:\LeoCode\HtCadTool\HelpMd\assets/ok.png) | ![](C:\LeoCode\HtCadTool\HelpMd\assets/ok.png) |                |
-| GeoPackage（矢量）                     | `gpkg`                  | ![](C:\LeoCode\HtCadTool\HelpMd\assets/ok.png) | ![](C:\LeoCode\HtCadTool\HelpMd\assets/ok.png) |                |
+| 名称                      | 后缀                    | 读                         | 写                         | 说明           |
+| ------------------------- | ----------------------- | -------------------------- | -------------------------- | -------------- |
+| `ESRI Shapefile`          | `shp` `shx` `dbf` `cpg` | ![image](./assets/0ok.png) | ![image](./assets/0ok.png) |                |
+| `FileGDB`                 | `gdb`                   | ![image](./assets/0ok.png) | ![image](./assets/0ok.png) |                |
+| `Keyhole Markup Language` | `kml` `kmz`             | ![image](./assets/0ok.png) | ![image](./assets/0ok.png) |                |
+| `Excel`                   | `xlsx` `xls`            | ![image](./assets/0ok.png) | ![image](./assets/0ok.png) | 导出格式为xlsx |
+| `GeoJSON`                 | `json` `geojson`        | ![](./assets/0ok.png)      | ![image](./assets/0ok.png) |                |
+| `Personal GeoDatabase`    | `mdb`                   | ![image](./assets/0ok.png) |                            |                |
+| `Comma Separated Value`   | `csv` `csvt`            | ![image](./assets/0ok.png) | ![image](./assets/0ok.png) |                |
+| `GeoPackage`              | `gpkg`                  | ![image](./assets/0ok.png) | ![image](./assets/0ok.png) |                |
 
 ### 导入数据<a id="导入数据"></a>
 
 可将外部数据导入到 `AutoCAD` 中，支持的格式有 `Shapefile`，`FileGDB`，`Kml`，`Xlsx`，`GeoJson `等，加载方法如下：
 
-- **方法1**：单击 `目录` ，找到需要加载的数据，双击或者右键即可加载；
+- **方法1**：单击 `目录` ，找到需要加载的数据，双击或者右键即可加载； 
 
-  ![](C:\LeoCode\HtCadTool\HelpMd\assets/内容列表-目录.png)
+  ![image](./assets/0内容列表-目录.png)
 
 - **方法2**：`图层根节点右键 > 添加数据`，浏览并选择需要加载的数据即可；
 
-  ![](C:\LeoCode\HtCadTool\HelpMd\assets/添加数据.png)
+  ![image](./assets/0添加数据.png)
 
   > 表格也可以通过这个方式加载，在表格根节点右键即可。
 
 - **方法3**：对于 `Shapefile`，`GeoJson` 等单图层文件，可以将 `shp` `json` 直接拖动到图层面板实现加载；
 
-  ![](C:\LeoCode\HtCadTool\HelpMd\assets/添加数据1.png)
+  ![image](./assets/0添加数据1.png)
 
 **注意事项**
 
@@ -97,7 +96,7 @@
 
 - 可通过命令 `GCC` 进行要素导入设置。
 
-  ![image-20230710163542468](C:\LeoCode\HtCadTool\HelpMd\assets\image-20230710163542468.png)
+  ![image](./assets/0全局设置.png)
 
 ### 导出数据<a id="导出数据"></a>
 
@@ -105,11 +104,11 @@
 
 - **方法1**：`图层根节点右键 > 导出 > 选择目标格式`，再勾选要导出的图层和要素类型即可，此方法一次可导出多个 `CAD` 图层；
 
-  ![](C:\LeoCode\HtCadTool\HelpMd\assets/导出数据1.png)
+  ![image](./assets/0导出数据1.png)
 
 - **方法2**：`图层节点右键 > 导出 > 选择目标格式`，再勾选要导出的要素类型即可，此方法一次导出一个 `CAD` 图层；
 
-  ![image-20230709111538513](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709111538513.png)
+  ![image](./assets/0导出SHP设置.png)
 
 ### 格式相关说明<a id="格式相关说明"></a>
 
@@ -156,17 +155,17 @@
 
 - 导入土地报备数据，命令 `BBDR`
 
-  ![image-20230709154747170](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709154747170.png)
+  ![image](./assets/0报备导入.png)
 
   > - 导入时可选择多个 `txt` 同时导入，默认导入到文件同名图层。
   >
   > - 属性导入到对应字段中，可自由修改。
 
-  ![image-20230709155133997](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709155133997.png)
+  ![image](./assets/0报备导入_字段.png)
 
 - 导出土地报备数据，命令 `BBDC`
 
-  ![image-20230709154108127](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709154108127.png)
+  ![image](./assets/0报备导出.png)
 
 
 
@@ -207,11 +206,11 @@
 - 命令 `SFM` ，可打开当前图层的字段管理器。
 - `内容列表 > 选中图层 > 右键 > 字段`，可打开该图层的字段管理器。
 
-![image-20230709120543047](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709120543047.png)
+![image](./assets/0字段管理器.png)
 
 - 添加字段：在字段管理器界面点击添加字段，设置字段名，类型，长度等参数，点击确定即可添加字段；
 
-![image-20230709121323694](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709121323694.png)
+![image](./assets/0添加字段.png)
 
 - 删除字段：在字段列表中选中要删除的字段 ，可选择多个，再点击删除字段，提示选择是即可删除所选字段；
 
@@ -225,23 +224,23 @@
 
   > 字段模板格式为CSV文件，可通过Excel或文本编辑器直接编辑（名称，类型，长度为必填项），参考如下
 
-  ![image-20230709122125381](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709122125381.png)
+  ![image](./assets/0字段模板CSV.png)
 
 ### 属性表<a id="属性表"></a>
 
 属性表是管理属性数据的主要方式，通过属性表可对属性进行编辑、查找、选择、图形定位、字段计算、属性选择等操作。
 
-![](C:\LeoCode\HtCadTool\HelpMd\assets/属性表.png)
+![image](./assets/0属性表.png)
 
 您可通过以下方式打开属性表：
 
 - `内容列表 > 双击图层名` ，可快速打开对应属性表；
 
-  ![](C:\LeoCode\HtCadTool\HelpMd\assets/图层菜单-打开属性表-双击.png)
+  ![image](./assets/0图层菜单-打开属性表-双击.png)
 
 - `内容列表 > 图层右键 > 打开属性表`，可打开所选图层的属性表；
 
-  ![](C:\LeoCode\HtCadTool\HelpMd\assets/图层菜单-打开属性表.png)
+  ![image](./assets/0图层菜单-打开属性表.png)
 
 - 命令 `STABLE` ，可打开当前图层对应的属性表；
 
@@ -249,7 +248,7 @@
 
 按属性选择主要用于快速筛选定位并记录，单击属性表上方的按属性选择，可激活该功能
 
-![image-20230709135808587](C:\LeoCode\HtCadTool\HelpMd\assets/按属性选择.png)
+![image](./assets/0按属性选择.png)
 
 **使用提示**
 
@@ -263,7 +262,7 @@
 
 字段计算器主要用于批量修改字段内容的，打开属性表后，`字段标题右键 > 字段计算器` 即可打开字段计算器。
 
-![image-20230709141033433](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709141033433.png)
+![image](./assets/0字段计算器.png)
 
 - 函数类型包括：工具、字符串、数字、转换，用于切换功能区的常用函数，实际可用函数远不止这些，具体可参考 [`计算字段示例`](#计算字段示例)。
 
@@ -390,25 +389,25 @@
 
 字段连接可将属性表和其他表的数据通过字段进行连接，多用于浏览和更新字段值，若想不打开属性表实现数据更新，可参考 [`挂接外部数据`](#挂接外部数据)；
 
-![](C:\LeoCode\HtCadTool\HelpMd\assets/属性表-连接.png)
+![image](./assets/0属性表-连接.png)
 
 **操作步骤：**
 
 1. 选择用于连接的字段和用于连接的表；
 
-   ![image-20230709145913392](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709145913392.png)
+   ![image](./assets/0属性表字段连接.png)
 
 2. 验证连接，按提示检查设置；
 
-   ![image-20230709150018387](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709150018387.png)
+   ![image](./assets/0属性表字段连接验证.png)
 
 3. 点击右侧的字段，勾选需要连接到当前数据的字段，确定即可完成连接操作；
 
-   ![image-20230709150317921](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709150317921.png)
+   ![image](./assets/0属性表字段连接_选字段.png)
 
 **注意事项**
 
-> - 连接加入的字段以灰色背景显示，不可编 辑的，且连接只对当前打开的属性表有效，属性表刷新或关闭后连接销毁；
+> - 连接加入的字段以灰色背景显示，不可编辑的，且连接只对当前打开的属性表有效，属性表刷新或关闭后连接销毁；
 > - 可通过字段计算的方式将连接获取的数据保存到要素中；
 > - 可通过置入字段的方式，直接将连接的字段内容保存到要素中；
 
@@ -420,7 +419,7 @@
   > - 双击行头可缩放至行对应实体，若对应的是表，则双击会打开表对应的属性值窗口；
   > - 具体行为可在属性表选项中调整
 
-![image-20230709150800516](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709150800516.png)
+![image](./assets/0属性表选项.png)
 
 - 记录跳转
 
@@ -436,32 +435,32 @@
 
   > - 行头右键功能菜单，可定位实体，并执行复制等操作；
 
-  ![image-20230709150814269](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709150814269.png)
+  ![image](./assets/0属性表行右键菜单.png)
 
   > - 列头右键功能菜单，可查看字段属性，并进行关闭、删除，冻结字段等操作；
 
-  ![image-20230709151144333](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709151144333.png)
+  ![image](./assets/0属性表列右键菜单.png)
 
   > - 选中单元格右键功能菜单，可复制单元格内容等；
 
-  ![image-20230709151151087](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709151151087.png)
+  ![image](./assets/0属性表单元格右键菜单.png)
 
 - 属性表外观
 
   > - 功能菜单-选项，弹出口窗口中可调整属性表行高，字体样式等。
 
-![image-20230709150828714](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709150828714.png)
+![image](./assets/0属性表设置.png)
 
 ### 属性面板<a id="属性面板"></a>
 
 属性值可在选中实体时即时显示其属性值，用于快速修改，命令 `EXX`
 
-![image-20230709152103765](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709152103765.png)
+![image](./assets/0属性面板.png)
 
 - 一些软件给实体附加了属性，通过属性值界面可以浏览，但字段内容显示为灰色且不可编辑，这是由于这些属性并未在图层字段中“定义”，可通过定义字段来快速添加这些字段，从而实现编辑
 - 定义字段打开的就是图层的字段管理器，只是按当前的属性列默认列出了字段，不用一个个去添加而已，实际上要使字段可编辑，在字段管理器中添加同名字段即可
 
-![image-20230709152205604](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709152205604.png)
+![image](./assets/0属性面板_定义字段.png)
 
 #### 打开外部数据<a id="打开外部数据"></a>
 
@@ -469,15 +468,15 @@
 
 1. 单击设置链接打开设置窗口；
 
-![image-20230709152315956](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709152315956.png)
+![image](./assets/0属性面板_外部连接.png)
 
 2. 勾选启用外部链接，设置文件所在的路径，如有必要，可设置子路径字段，行为可按需求自行设置；
 
-![image-20230709152322962](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709152322962.png)
+![image](./assets/0属性面板_外部连接设置.png)
 
 3. 确定后，鼠标移动到字段名称上，会出现小箭头，若设置正确，单击即可用系统默认应用快速打开对应文件；
 
-![image-20230709152328236](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709152328236.png)
+![image](./assets/0属性面板_外部连接示例.png)
 
 #### 属性下拉列表<a id="属性下拉列表"></a>
 
@@ -485,15 +484,15 @@
 
 1. 单击配置属性域
 
-![image-20230709152456592](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709152456592.png)
+![image](./assets/0属性面板_下拉列表.png)
 
 2. 弹出字段属性域界面
 
-![image-20230709152511654](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709152511654.png)
+![image](./assets/0属性域.png)
 
 3. 首次打开该界面，可能在“属性域”中没有可选项目，则需要通过“编辑域”来添加字典，并添加对应的项目，完成后回到属性域界面选择对应的字典即可
 
-   ![image-20230709152531533](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709152531533.png)
+   ![image](./assets/0字典编辑器.png)
 
 > 字典和下拉列表配置保存在文件 DWG 中，复制到其他文件的实体将不共享该定义；
 > 属性域和字典都可以保存到本地，复制给其他人使用。
@@ -502,19 +501,19 @@
 
 `属性连接` 用于批量更新多个图层的多个字段内容，可以理解为 `批量的字段计算器`，除计算字段外，还可以执行一些分类求和等操作，命令 `SXLJ`
 
-![image-20230709152741209](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709152741209.png)
+![image](./assets/0属性连接.png)
 
 **操作步骤**
 
 1. 点击面板上的 `添加` ，在弹出的窗口中配置规则。
 
-   ![image-20230709152752998](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709152752998.png)
+   ![image](./assets/0属性连接_添加.png)
 
 2. 在 `连接方法` 中选择需要的方法，这儿以 `计算字段` 为例，选择计算字段后，选择 `目标表` 和 `目标字段`。
 
 3. 在 `参数` 中输入计算表达式，确定 即可完成该项规则配置。
 
-   ![image-20230709152811867](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709152811867.png)
+   ![image](./assets/0属性连接_参数.png)
 
 4. `确定` 后，规则列表中会出现这条规则，可以继续添加多个规则。配置好的规则可 `保存` 到本地，下次使用时 `加载` 即可，也可以将配置文件复制给他人使用。
 
@@ -522,7 +521,7 @@
 
 6. 简单浏览下结果列表的内容，确认无误的话，点击 保存 即可将结果列表中的内容保存到字段中。
 
-   ![image-20230709152901747](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709152901747.png)
+   ![image](./assets/0属性连接_预览.png)
 
 **属性连接方法**
 
@@ -533,13 +532,13 @@
 | 3    | 计数     | 统计与目标记录匹配的记录数量，填入目标字段中 。无需指定输入字段 |
 | 4    | 分类求和 | 对输入字段的值进行求和，并按分类字段填入目标字段中 。需指定分类字段，输入字段只能为数值类型 |
 | 5    | 分类计数 | 统计与目标记录匹配的记录数量，并按分类字段分类填入目标字段中。需指定分类字段，无需指定输入字段 |
-| 6    | 计算字段 | 详见 `字段计算器` 关描述                                     |
+| 6    | 计算字段 | 详见 [`字段计算器`](#字段计算器) 关描述                      |
 
 ### 挂接外部数据<a id="挂接外部数据"></a>
 
 纵然属性表和字段计算器已经为 CAD 属性编辑提供了极大便利，但其编辑功能仍不能和 Excel 等专业软件相比，而属性表的字段连接必须打开属性表才能操作，其目的主要是查看而非更新属性，由此设计了 `挂接外部数据`功能，可通过关联字段，将外部数据批量更新到属性表中。
 
-![image-20230710114209882](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230710114209882.png)
+![image](./assets/0挂接外部数据.png)
 
 **操作步骤**
 
@@ -554,11 +553,11 @@
    > - 设置好图层及字段后，同名字段默认会被勾选。
    > - 勾选外部字段后，若不指定对应的图层字段，会提示向属性表中追加该字段。
 
-   ![image-20230710132834652](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230710132834652.png)
+   ![image](./assets/0挂接外部数据_追加字段.png)
 
 3. 点击 `开始连接` ，软件会分析挂接情况，并提示分析结果。
 
-   ![image-20230710132935173](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230710132935173.png)
+   ![image](./assets/0挂接外部数据_分析结果.png)
 
 4. 点击 `是` 即可将勾选的字段更新到属性表中。
 
@@ -590,7 +589,7 @@
 
 命令`TV`，拓扑验证一般用于修复图形在“微观”层面的一些错误，以规范图形质量，同时也是执行拓扑检查的基础，一些未通过拓扑验证的数据会导致拓扑检查失败，正确理解验证对规范空间数据质量有重要作用。
 
-![image-20230709155704264](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709155704264.png)
+![image](./assets/0拓扑验证.png)
 
 > - 验证会对要素折点进行聚类处理，彼此间距离在指定范围内的折点被认为表示同一个位置，换言之，在容差范围内的折点会被捕捉到一起，处于拓扑容差范围内的所有折点在验证过程中均可能轻微移动。
 > - 拓扑容差应设置在不影响数据质量的范围内。
@@ -600,7 +599,7 @@
 1. 在 `图层列表` 中勾选需要加入验证的图层，并设置其 `锁定状态` 和 `优先级` 。
 2. 在 `验证设置` 中勾选要验证的项目，在 `容差设置` 中设置合适的容差 。
 
-![image-20230709155927614](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709155927614.png)
+![image](./assets/0拓扑验证_参数.png)
 
 3. 点击 `框选验证` 或 `全部验证` ，等待验证完成即可。
 
@@ -651,23 +650,23 @@
 
 命令`TC`，拓扑检查 一般用于图形的空间关系检查，按指定的规则检查图形数据，列出不满足规则的项供用户快速定位并修改，以完善数据质量，和拓扑验证不同，拓扑检查更“宏观”，检查到的问题一般需要人工核实修改。
 
-![image-20230709160646660](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709160646660.png)
+![image](./assets/0拓扑检查.png)
 
 **操作步骤**
 
 1. 点击 添加 ，在弹出界面中按需要设置规则，确定即可将设置好的规则添加至规则列表，可添加多个规则：
 
-   ![image-20230709160717125](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709160717125.png)
+   ![image](./assets/0拓扑检查_规则.png)
 
    > 配置好的规则可 保存 到本地，下次使用时 加载 即可，也可以将配置文件复制给他人使用。
 
 2. 在规则列表中勾选需要检查的项 ，可多选，执行检查即可：
 
-   ![image-20230709160727410](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709160727410.png)
+   ![image](./assets/0拓扑检查_示例.png)
 
 3. 执行检查后，结果列表会列出检查到的错误，双击节点即可定位至相应的错误项
 
-   ![image-20230709160751687](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709160751687.png)
+   ![image](./assets/0拓扑检查_预览.png)
 
    > 所有的检查结果均保存在 _TopoCheck_Err 图层中，双击也是定位到该图层中的图形，可按需要删除或者关闭该图层，也可将该图层作为检查结果导出为其他格式，反馈第三方修改；
 
@@ -710,13 +709,13 @@
 
 命令：`KJXZ`，利用 空间选择 工具，您可以根据要素相对于另一图层要素的位置来进行选择。 您可使用多种选择方法，选择与同一图层或其他图层中的要素接近或重叠的点、线或面要素。
 
-![image-20230709161308006](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709161308006.png)
+![image](./assets/0空间选择.png)
 
 **操作步骤**
 
 1. 根据需要选取 `选择方法` ，单击下拉箭头查看您的选择。
 
-   ![image-20230709161348559](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709161348559.png)
+   ![image](./assets/0空间选择_选择方法.png)
 
 2. 在图层列表中勾选想要选择的 `目标图层` ，可以选择多个。
 
@@ -726,7 +725,7 @@
 
 5. 在 `空间选择方法` 中选取空间关系规则。
 
-   ![image-20230709161355867](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709161355867.png)
+   ![image](./assets/0空间选择_空间方法.png)
 
 6. 按需要设置 `搜索距离` ，点击 `应用` 即可完成选择。
 
@@ -734,7 +733,7 @@
 
 命令：`KJLJ`，空间连接 可利用不同图层中各要素的空间关系为字段赋值，顺带也兼具部分 拓扑检查 的功能。
 
-![image-20230709161508273](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709161508273.png)
+![image](./assets/0空间连接.png)
 
 **操作步骤**
 
@@ -744,7 +743,7 @@
 
 3. 点击 `验证` ，结果列表中会列出匹配情况，单击可定位查看相关图形。
 
-   ![image-20230709161537454](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709161537454.png)
+   ![image](./assets/0空间连接_预览.png)
 
 4. 检查无误后，点击 `保存` 即可将结果列表中的内容保存到字段中。
 
@@ -768,27 +767,27 @@
 
 1. 打开 FW 和 FW注记 图层的属性表，分别添加 Text 字段 ，如已有字段可忽略该步骤。
 
-   ![image-20230709161921591](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709161921591.png)
+   ![image](./assets/0空间连接_示例1.png)
 
 2. 打开 字段计算器 ，计算 Text 字段的值，表达式为 DBOBJECT.TextString，可将文字内容提取到字段中。
 
-   ![image-20230709161926280](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709161926280.png)
+   ![image](./assets/0空间连接_示例2.png)
 
 3. 打开 空间连接 面板，若图层和字段和上述一致，可如下设置，注意空间关系选 目标要素包含输入要素 。
 
-   ![image-20230709161930482](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709161930482.png)
+   ![image](./assets/0空间连接_示例3.png)
 
 4. 设置好后 验证 ，下方列表中会提示验证结果，本例中有8个闭合多段线未包含文字注记，可定位检查修改。
 
-   ![image-20230709161934811](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709161934811.png)
+   ![image](./assets/0空间连接_示例4.png)
 
 5. 确认后 保存 即可。
 
 ### 空间参考<a id="空间参考"></a>
 
-- `AutoCAD` 使用的是以固定坐标定位数据的 2D 和 3D 笛卡尔坐标系。其 x、y 和 z 坐标本质上并不是地理位置，而是相对于任一几何原点 (0,0,0) 的位置。
-- 为建立和 GIS 数据的转换，x 轴可以认为是向东的方向，y 轴可以认为是向北的方向，由此建立空间参考。
-- 本软件的 `定义投影` 功能需要用户清楚自己所使用数据的坐标系，定义投影只是将该坐标系的参数保存下来，在格式转换和数据交互时提取使用，并不会实际修改图形的坐标值，切记。
+`AutoCAD` 使用的是以固定坐标定位数据的 2D 和 3D 笛卡尔坐标系。其 x、y 和 z 坐标本质上并不是地理位置，而是相对于任一几何原点 (0,0,0) 的位置。为建立和 GIS 数据的转换，x 轴可以认为是向东的方向，y 轴可以认为是向北的方向，由此建立空间参考。
+
+> 本软件的 `定义投影` 功能需要用户清楚自己所使用数据的坐标系，定义投影只是将该坐标系的参数保存下来，在格式转换和数据交互时提取使用，并不会实际修改图形的坐标值，切记。
 
 **设置全局空间参考**<a id="设置全局空间参考"></a>
 
@@ -796,11 +795,11 @@
 
 1. 图层根节点右键，选择 `设置投影` 。
 
-   ![image-20230709162118911](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709162118911.png)
+   ![image](./assets/0空间参考1.png)
 
 2. 在弹出窗口中选择需要的投影，单击 `确定` 即可 （也可双击投影节点直接确定）。
 
-   ![image-20230709162243910](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709162243910.png)
+   ![image](./assets/0空间参考2.png)
 
    > - 搜索框可对坐标系名称进行关键词搜索；
    > - 选择界面列出了常用的地理坐标系和投影坐标系，选中坐标系后会列出参数；
@@ -808,11 +807,11 @@
 
 3. 有必要的话，可通过 `自定义` 设置坐标系
 
-   ![image-20230709162532765](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709162532765.png)
+   ![image](./assets/0空间参考_自定义坐标系.png)
 
 4. 投影设置成功后会有提示，同时 AutoCAD 状态栏的图形坐标前会显示当前投影名称，未定义投影则显示 `NOPRJ`；
 
-   ![image-20230709162258272](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709162258272.png)
+   ![image](./assets/0空间参考_状态栏.png)
 
 5. 命令 `SPRJ` ，也可以设置投影。
 
@@ -822,7 +821,7 @@
 
 设置方法：`图层右键 > 属性 > 设置投影 > 确定`。
 
-![image-20230710174607729](C:\LeoCode\HtCadTool\HelpMd\assets\image-20230710174607729.png)
+![image](./assets/0空间参考_图层.png)
 
 
 
@@ -832,32 +831,32 @@
 
 `AutoCAD` 本身可通过 `光栅图像` 或者 `OLE` 加载栅格数据，但这两种方式都有局限性，面对动辄几十上百G的栅格数据显得捉襟见肘，较为主流的方式是将影像裁剪为小图幅瓦片，按需要加载，但这种方式在某些场景下操作较为繁琐，这时候可通过本软件 `大影像` 来实现加载，目前支持的格式如下：<a id="支持的栅格格式"></a>
 
-| 名称        | 后缀       | 读                                                           | 写                                                           | 说明 |
-| ----------- | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
-| GTIFF       | .tif .tiff | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/ok.png?lastModify=1688955285?lastModify=1688975983) | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/ok.png?lastModify=1688955285?lastModify=1688975983) |      |
-| HFA         | .img       | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/ok.png?lastModify=1688955285?lastModify=1688975983) | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/ok.png?lastModify=1688955285?lastModify=1688975983) |      |
-| GPKG        | .gpkg      | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/ok.png?lastModify=1688955285?lastModify=1688975983) | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/ok.png?lastModify=1688955285?lastModify=1688975983) |      |
-| VRT         | .vrt       | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/ok.png?lastModify=1688955285?lastModify=1688975983) | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/ok.png?lastModify=1688955285?lastModify=1688975983) |      |
-| JP2OpenJPEG | .jp2 .j2k  | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/ok.png?lastModify=1688955285?lastModify=1688975983) | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/ok.png?lastModify=1688955285?lastModify=1688975983) |      |
-| PNG         | .png       | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/ok.png?lastModify=1688955285?lastModify=1688975983) | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/ok.png?lastModify=1688955285?lastModify=1688975983) |      |
-| Rasterlite  | .sqlite    | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/ok.png?lastModify=1688955285?lastModify=1688975983) | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/ok.png?lastModify=1688955285?lastModify=1688975983) |      |
-| MBTile      | .mbtiles   | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/ok.png?lastModify=1688955285?lastModify=1688975983) | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/ok.png?lastModify=1688955285?lastModify=1688975983) |      |
-| MFF         | .hdr       | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/ok.png?lastModify=1688955285?lastModify=1688975983) | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/ok.png?lastModify=1688955285?lastModify=1688975983) |      |
-| EHDR        | .bil       | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/ok.png?lastModify=1688955285?lastModify=1688975983) | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/ok.png?lastModify=1688955285?lastModify=1688975983) |      |
+| 名称          | 后缀                    | 读                                                           | 写                                                           | 说明 |
+| ------------- | ----------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
+| `GTIFF`       | `tif` `tiff`            | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/0ok.png?lastModify=1688955285?lastModify=1688975983) | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/0ok.png?lastModify=1688955285?lastModify=1688975983) |      |
+| `HFA`         | `img` `ige` `rde` `rrd` | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/0ok.png?lastModify=1688955285?lastModify=1688975983) | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/0ok.png?lastModify=1688955285?lastModify=1688975983) |      |
+| `GPKG`        | `gpkg`                  | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/0ok.png?lastModify=1688955285?lastModify=1688975983) | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/0ok.png?lastModify=1688955285?lastModify=1688975983) |      |
+| `VRT`         | `vrt`                   | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/0ok.png?lastModify=1688955285?lastModify=1688975983) | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/0ok.png?lastModify=1688955285?lastModify=1688975983) |      |
+| `JP2OpenJPEG` | `jp2` `j2k`             | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/0ok.png?lastModify=1688955285?lastModify=1688975983) | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/0ok.png?lastModify=1688955285?lastModify=1688975983) |      |
+| `PNG`         | `png`                   | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/0ok.png?lastModify=1688955285?lastModify=1688975983) | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/0ok.png?lastModify=1688955285?lastModify=1688975983) |      |
+| `Rasterlite`  | `sqlite`                | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/0ok.png?lastModify=1688955285?lastModify=1688975983) | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/0ok.png?lastModify=1688955285?lastModify=1688975983) |      |
+| `MBTile`      | `mbtiles`               | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/0ok.png?lastModify=1688955285?lastModify=1688975983) | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/0ok.png?lastModify=1688955285?lastModify=1688975983) |      |
+| `MFF`         | `hdr`                   | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/0ok.png?lastModify=1688955285?lastModify=1688975983) | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/0ok.png?lastModify=1688955285?lastModify=1688975983) |      |
+| `EHDR`        | `bil`                   | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/0ok.png?lastModify=1688955285?lastModify=1688975983) | ![img](file://C:/LeoCode/HtCadTool/HelpMd/assets/0ok.png?lastModify=1688955285?lastModify=1688975983) |      |
 
 > `大影像` 并非指影像非得要多大，只是系列功能的名称，通过这些功能还可以分割和合并栅格，构建影像金字塔等，结合CAD本身的 `光栅图像` 功能，实现更全面的栅格数据支持。
 
 - 加载影像：命令`GIMG`，也可通过 `影像 > 右键菜单 > 添加影像` 来加载。
 
-![image-20230709173150751](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709173150751.png)
+![image](./assets/0大影像_添加.png)
 
 - 移除影像：命令 `CIMG` ，移除所有已加载的影像，也可通过 `影像图层 > 右键菜单 > 移除` 移除单张影像。
 
-![image-20230709172707989](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709172707989.png)
+![image](./assets/0大影像_移除.png)
 
 - 导出影像：`影像图层 > 右键菜单 > 导出 > 选择目标格式 > 确定 `，该功能可转换栅格格式，部分CAD光栅图像不支持的格式，可通过转换得到支持的格式。
 
-  ![image-20230709174536546](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709174536546.png)
+  ![image](./assets/0大影像_格式.png)
 
 - 影像裁剪：`影像图层 > 右键菜单 > 裁剪 > 拾取用于裁剪的多边形 > 选择目标格式 > 确定`，该功能可将大影像批量分割为小影像，支持多部件、洞和曲线
 
@@ -865,11 +864,11 @@
 
 - 影像合并：命名 `MIMG`，可将具有相同空间参考的影像合并到一起
 
-  ![image-20230709175220264](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709175220264.png)
+  ![image](./assets/0大影像_合并.png)
 
 - 构建金字塔：命令`BOV`，影像有金字塔方能正常加载，该工具用于批量构建影像金字塔。
 
-  ![image-20230709180046899](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709180046899.png)
+  ![image](./assets/0大影像_金字塔.png)
 
 > - 由于大影像是动态渲染，无法直接打印，若要打印可参考 [`关于打印`](#关于打印)。
 
@@ -899,11 +898,11 @@ AutoCAD 本身的栅格功能不具备识别栅格定位文件的能力，每次
 
   > 在栅格数据中图像的每个像元都具有一个行号和列号，但并没有实际的坐标信息。要以真实世界坐标显示图像，需要建立一个行列号到坐标的变换以将图像坐标转换为真实世界坐标，栅格坐标文件就是存储这个变换参数。
 
-  | 栅格数据文件 | 坐标文件                             |
-  | ------------ | ------------------------------------ |
-  | image.tif    | image.tfw 或 image.tifw 或 image.wld |
-  | image.jpg    | image.jgw 或 image.jpgw 或 image.wld |
-  | image.png    | image.pgw 或 image.wld               |
+  | 栅格数据文件 | 坐标文件                               |
+  | ------------ | -------------------------------------- |
+  | `image.tif`  | `image.tfw`  `image.tifw`  `image.wld` |
+  | `image.jpg`  | `image.jgw` `image.jpgw` `image.wld`   |
+  | `image.png`  | `image.pgw` `image.wld`                |
 
 - 栅格边框可见性：命令 `FV` ，在显示和不显示栅格边框间切换。
 
@@ -914,51 +913,51 @@ AutoCAD 本身的栅格功能不具备识别栅格定位文件的能力，每次
 
 - 关于TIFF<a id="关于TIFF"></a>
 
-  `TIFF（或TIF）`是一种常见的图像文件格式，它可以存储多个图像和元数据，CAD 的光栅图像也支持插入 TIF 图像，但在实际使用过程中会发现一些 TIF 并不能插入 CAD 中，提示如下：
+  `TIFF(TIF)`是一种常见的图像文件格式，它可以存储多个图像和元数据，`CAD` 的光栅图像也支持插入 TIF 图像，但在实际使用过程中会发现一些 TIF 并不能插入 `CAD` 中，提示如下：
 
-  ![image-20230710105247451](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230710105247451.png)
+  ![image](./assets/0光栅图像_格式错误提示.png)
 
-  出现这种情况，除却文件损坏等原因，很有可能是该图像不是传统的 TIF 图像，而是 BigTIFF ，在此简单说明几个概念：
+  出现这种情况，除却文件损坏等原因，很有可能是该图像不是传统的 `TIF` 图像，而是 `BigTIFF` ，在此简单说明几个概念：
 
-  > TIFF：传统的图像文件格式，TIF格式可以存储32位深度的图像文件，但是文件大小不能超过4GB。**（CAD支持）**
+  > `TIFF`：传统的图像文件格式，`TIF` 格式可以存储32位深度的图像文件，但是文件大小不能超过4GB。**（`CAD` 支持）**
   >
-  > BigTIFF ：为打破 TIF 的4GB大小限制而生，使用了64位的地址空间，允许文件大小超过4GB。**（CAD不支持）**
+  > `BigTIFF` ：为打破 `TIF` 的4GB大小限制而生，使用了64位的地址空间，允许文件大小超过4GB。**（`CAD` 不支持）**
   >
-  > GeoTIFF：一种特殊的TIF文件格式，它无需坐标文件 `tfw` ，自身即包含了地理参考信息，，使得GIS软件能够更容易地识别图像的地理位置和坐标系。（CAD不一定支持，具体取决于文件是否是BigTIFF ）
+  > `GeoTIFF`：一种特殊的 `TIF` 文件格式，它无需坐标文件 `tfw` ，自身即包含了地理参考信息，，使得`GIS` 软件能够更容易地识别图像的地理位置和坐标系。（`CAD` 不一定支持，具体取决于文件是否是`BigTIFF` ）
 
-  由于上述格式的后缀名都是 `*.tif 或 *.tiff` ，无法简单通过后缀判别，若出现无法光栅图像无法加载的情况，可通过以下方法解决：
+  由于上述格式的后缀名都是 `tif` `tiff` ，无法简单通过后缀判别，若出现无法光栅图像无法加载的情况，可通过以下方法解决：
 
   > 1. 通过 `gimg` 加载图像；
-  > 2. 若图像小于4GB，直接导出为TIFF；
-  > 3. 若图像大于4GB，通过裁剪将其分割，导出为多个 TIFF；
+  > 2. 若图像小于4GB，直接导出为 `TIFF`；
+  > 3. 若图像大于4GB，通过裁剪将其分割，导出为多个 `TIFF`；
   > 4. 将导出的结果通过光栅图像加载。
 
 ### 在线地图<a id="在线地图"></a>
 
-命令：`STM`，TileMap 是一款用于 AutoCAD 的在线地图浏览和下载工具，可在 AutoCAD 上方便快捷的浏览高德、百度、腾讯、ArcGIS等大部分在线地图，并支持自定义地图，同时提供下载功能。
+命令：`STM`，`TileMap` 是一款用于 `AutoCAD` 的在线地图浏览和下载工具，可在 `AutoCAD` 上方便快捷的浏览高德、百度、腾讯、`ArcGIS` 等大部分在线地图，并支持自定义地图，同时提供下载功能。
 
-![image-20230710094501786](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230710094501786.png)
+![image](./assets/0在线地图_示例.png)
 
 #### 基础操作
 
-- 缩放至图层![LayerZoomTo16](C:\LeoCode\HtCadTool\HelpMd\assets/LayerZoomTo16.png)：可缩放至当前图源范围。
-- 缩放至分辨率![RasterZoomToResolution16](C:\LeoCode\HtCadTool\HelpMd\assets/RasterZoomToResolution16.png)：在浏览有文字的地图时，缩放至分辨率可将当前层级的地图和当前视图的分辨率对齐，以获得更好的文字显示效果。
+- 缩放至图层：可缩放至当前图源范围。
+- 缩放至分辨率：在浏览有文字的地图时，缩放至分辨率可将当前层级的地图和当前视图的分辨率对齐，以获得更好的文字显示效果。
 
-![image-20230709182155472](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709182155472.png)
+![image](./assets/0在线地图_分辨率对齐.png)
 
-- 鼠标滚动对齐![mouse_select_scroll](C:\LeoCode\HtCadTool\HelpMd\assets/mouse_select_scroll.png)：对齐后，每次滚动滚轮均固定缩放一个层级的地图，浏览体验更好（实际上就是调整 ZOOMFACTOR 参数为100)。
+- 鼠标滚动对齐：对齐后，每次滚动滚轮均固定缩放一个层级的地图，浏览体验更好（实际上就是调整 `ZOOMFACTOR` 参数为 `100`)。
 
 #### 自定义图源<a id="自定义图源"></a>
 
 - 点击图源下方的 `...` 可打开图源管理器，可添加、删除和修改图源；
 
-  ![image-20230710102534607](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230710102534607.png)
+  ![image](./assets/0在线地图_自定义图源.png)
 
 - 双击可编辑现有图源，点击新增可添加图源；
 
-  ![image-20230710102059885](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230710102059885.png)
+  ![image](./assets/0在线地图_添加图源.png)
 
-  > - 图源支持 XYZ 图源，URL中分别用变量 `{x} {y} {z}` 替代 `x y z` 值，量 `{s} {y} {z}` 替代主机编号
+  > - 图源支持 `XYZ` 图源，URL中分别用变量 `{x} {y} {z}` 替代 `x y z` 值，量 `{s} {y} {z}` 替代主机编号
   > - 投影类型默认为墨卡托全球，若发现有偏移，可尝试切换为墨卡托中国
   > - 最大级别默认21，若发现缩放到一定级别提示此区域无卫星图，可将此值修改为有图显示的最高级别
 
@@ -966,7 +965,7 @@ AutoCAD 本身的栅格功能不具备识别栅格定位文件的能力，每次
 
 选项可以设置地图的透明度、亮度、对比度，可以设置动态投影，将在线地图投影到需要的位置。
 
-![image-20230709182221644](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230709182221644.png)
+![image](./assets/0在线地图_选项.png)
 
 - 置顶显示：地图默认是居于最底层显示，勾后将置顶显示；
 
@@ -974,7 +973,8 @@ AutoCAD 本身的栅格功能不具备识别栅格定位文件的能力，每次
 
 - 动态投影：地图默认使用 `WebMercator` 投影，该投影具有最佳的浏览性能，可根据实际需要设置其他投影，使用时注意检查精度，并不是所有坐标系都支持动态投影；
 
-  > 注：动态投影会对显示性能有一定影响
+  > - 动态投影会对显示性能有一定影响
+  > - 显示范围可绘制当前坐标系的大致有效范围，可供参考
 
 - 等级限制：设置最大缩放级别，超过该级别的地图将不予显示（可用于限制“此区域无卫星图”的显示）；
 
@@ -982,15 +982,15 @@ AutoCAD 本身的栅格功能不具备识别栅格定位文件的能力，每次
 
 - `选择图源 > 设置投影 > 工具 > 下载影像`
 
-  ![image-20230710095812684](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230710095812684.png)
+  ![image](./assets/0在线地图_下载.png)
 
 - `绘制/拾取要下载的范围 > 勾选下载级别 > 选择保存位置和格式 > 开始下载`，等待下载完成即可。
 
-  ![image-20230710101355350](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230710101355350.png)
+  ![image](./assets/0在线地图_下载界面.png)
 
 - 若要一次下载多个范围，可提前准备好图框（闭合多段线，可通过命令 `GGG` 绘制），通过 `批量下载` 执行选择操作，若所选图框不止一个，选项中会提示设置下载命名字段，设置好字段后，若所选图形有该字段值，则导出的地图会按字段值命名（路径不变）。
 
-  ![image-20230710100359434](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230710100359434.png)
+  ![image](./assets/0在线地图_批量下载.png)
 
 - 使用提示
 
@@ -1005,25 +1005,25 @@ AutoCAD 本身的栅格功能不具备识别栅格定位文件的能力，每次
 
 - 地图只适用于模型空间，只有鼠标滚轮拖动和缩放地图可触发地图刷新，若发现屏幕未及时刷新，可略微拖动地图触发刷新；
 
-- 低版本CAD可能会提示已无法进一步缩放，此时用命令 `REGEN` 刷新即可；
+- 低版本 `CAD` 可能会提示已无法进一步缩放，此时用命令 `REGEN` 刷新即可；
 
 - 地图经过投影转换，使用前请检查其精度；
 
 - 部分图源在切换时比较慢，请耐心等待，切换后若有部分瓦片没刷新的情况，可手动清理缓存；
 
-- 若拖动地图时感觉卡顿，可尝试在CAD选项中开启硬件加速：`Option > 系统 > 图形性能 > 开启硬件加速`。
+- 若拖动地图时感觉卡顿，可尝试在 `CAD` 选项中开启硬件加速：`Option > 系统 > 图形性能 > 开启硬件加速`。
 
-  ![image-20230710134520256](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230710134520256.png)
+
 
 ### 关于栅格工具
 
 大影像、光栅图像和在线地图适用场景各有不同，具体如下
 
-| 类型     | 特点及适用场景                                               | 打印支持 |
+| 类型     | 适用场景                                                     | 打印     |
 | -------- | ------------------------------------------------------------ | -------- |
-| 光栅图像 | 是对CAD光栅功能的扩展，需要CAD支持的格式，适合加载较多的小影像，且需要打印的场景 | 是       |
-| 大影像   | 动态绘制，不受CAD格式限制，且可加载较大尺寸的影像，适用于CAD无法加载的场景 | 否       |
-| 在线地图 | 动态绘制，即时浏览、套图、下载等场景                         | 否       |
+| 光栅图像 | 是对光栅功能的扩展，需要 `CAD` 支持的格式，适合加载较多的小影像，且需要打印的场景 | 支持打印 |
+| 大影像   | 不受 `CAD` 格式限制，可加载较大尺寸的影像，适用于 `CAD` 无法加载的场景 | 不支持   |
+| 在线地图 | 动态绘制，即时浏览、套图、下载等场景                         | 不支持   |
 
 ### 关于打印<a id="关于打印"></a>
 
@@ -1031,13 +1031,14 @@ AutoCAD 本身的栅格功能不具备识别栅格定位文件的能力，每次
 
 - 大影像：通过光栅图像加载即可打印。
 
-- - 影像格式不受支持的，可先导出为支持的格式
-  - 影像太大光栅图像无法加载的，可通过裁剪工具裁剪后再加载
+  > - 影像格式不受支持的，可先导出为支持的格式
+  > - 影像太大光栅图像无法加载的，可通过裁剪工具裁剪后再加载
 
 - 在线地图：直接下载，之后处理方式同大影像
+
 - 字段标注：标注转为注记即可
 
-注意：在线地图下载并非级别越高越好，注意根据应用场景判别。实际情况是国内几乎没有超过18级的在线地图，即使显示提示是20级，也只是18或更低级别的影像重采样到20级的，实际分辨率并没有提升，没必要去追求高级别，这点注意甄别
+注意：在线地图下载并非级别越高越好，注意根据应用场景判别。实际情况是国内几乎没有超过18级的在线地图，即使显示提示是20级，也只是18或更低级别的影像重采样到20级的，实际分辨率并没有提升，没必要去追求高级别，这点注意甄别。
 
 
 
@@ -1045,14 +1046,14 @@ AutoCAD 本身的栅格功能不具备识别栅格定位文件的能力，每次
 
 ### 多部件工具<a id="多部件工具"></a>
 
-GIS 要素类型中的多部件面在 `AutoCAD` 中没有直接的对应图元，由此设计了多部件块，用于保存多部件要素信息，多部件块本身是 CAD 的块，只是在扩展属性中加入标签以便软件识别。
+`GIS` 要素类型中的多部件面在 `AutoCAD` 中没有直接的对应图元，因此设计了多部件块，用于保存多部件要素信息，多部件块本身是 `CAD` 的块，只是在扩展属性中加入标签以便软件识别。
 
 - 合并多部件（构建多部件）,命令： `BB`
 
   > - 输入命令并选择用于构面的闭合多段线后，软件会分析洞和多部件信息，编辑器会显示分析结果，并提示构建
   > - 拆分后的多个多部件块，可以用自动合并多部件命令 `BBA` 批量合并，并维持原有结构。
 
-  ![image-20230710141132135](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230710141132135.png)
+  ![image](./assets/0多部件块_构建.png)
 
 - 拆分多部件，命令： `XX`
 
@@ -1061,7 +1062,8 @@ GIS 要素类型中的多部件面在 `AutoCAD` 中没有直接的对应图元�
 
 - 编辑多部件块，命令： `BBE`
 
-  > - 也可以双击多部件块来原位编辑，添加或删除部件，通过命令 `BC` 保存编辑内容。
+  > - 进入原位编辑后，块外图元会暗显，完成编辑后通过命令 `BC` 保存，暗显恢复。
+  > - 也可以双击多部件块来原位编辑，添加或删除部件。
 
 - 清理多部件块，命令： `BCC`
 
@@ -1096,7 +1098,7 @@ GIS 要素类型中的多部件面在 `AutoCAD` 中没有直接的对应图元�
 
 - 文字遮罩，命令 `WZZZ`，可批量生成文字遮罩。
 
-  ![image-20230710182839954](C:\LeoCode\HtCadTool\HelpMd\assets\image-20230710182839954.png)
+  ![image](./assets/0文字遮罩.png)
 
 - 文字居中
 
@@ -1106,7 +1108,7 @@ GIS 要素类型中的多部件面在 `AutoCAD` 中没有直接的对应图元�
 
 ## 标注注记<a id="标注注记"></a>
 
-- 注记 （`Annotation`）：在 `AutoCAD` 中，注记一般以 文字 （`DBText`）的形式存在，将文字放在特定位置，起到说明的效果。
+- 注记 （`Annotation`）：在 `AutoCAD` 中，注记一般以 文字（`DBText`）的形式存在，将文字放在特定位置，起到说明的效果。
 - 标注 （`Label`）：主要用于将要素的属性显示出来，该属性可以是字段内容、多段线长度、面积、点坐标等。和注记不同，标注是动态的、基于属性的，属性改变则内容也会改变，无需用户手动去维护其一致性，标注和图元是一体的，图元移动或删除，标注也就随之移动或删除。下面列出了标注和注记的一些区别：
 
 ### 字段标注<a id="字段标注"></a>
@@ -1115,21 +1117,21 @@ GIS 要素类型中的多部件面在 `AutoCAD` 中没有直接的对应图元�
 
 1. 图层右键菜单，选择 `标注要素`；
 
-   ![image-20230710144258983](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230710144258983.png)
+   ![image](./assets/0标注要素.png)
 
-2. 在弹出窗口中设置名称和字段表达式；
+2. 在弹出窗口中设置标注名称和 `字段表达式`；
 
-   ![image-20230710144308932](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230710144308932.png)
+   ![image](./assets/0标注要素_表达式.png)
 
-3. 字段表达式可选择单个字段，可设置组合字段，也可通过 `DBOBJECT` 关键字设置图元属性，语法可参见 `字段计算器`；
+3. 字段表达式可选择单个字段，可设置组合字段，也可通过 `DBOBJECT` 关键字设置图元属性，语法可参见 [`字段计算器`](#字段计算器)；
 
-   ![image-20230710144314401](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230710144314401.png)
+   ![image](./assets/0标注要素_字段表达式.png)
 
 4. `确定` 即可完成标注，设置好的标注下次可直接使用，无需再次设置；
 
 5. 标注好的图层，可通过 `将标注转为注记`，实现标注到注记的转换；
 
-   ![image-20230710144338122](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230710144338122.png)
+   ![image](./assets/0标注要素_标注转注记.png)
 
 6. 若要调整标注细节 ，如字高、颜色、文字样式等，或为一个图层设置多个标注，可通过 `标注管理器` 实现。
 
@@ -1137,7 +1139,7 @@ GIS 要素类型中的多部件面在 `AutoCAD` 中没有直接的对应图元�
 
 - 设置好的标注，可通过标注管理器查看并管理，命令：`LM` <LABELMANAGER>
 
-  ![image-20230710144506758](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230710144506758.png)
+  ![image](./assets/0标注要素_标注管理器.png)
 
 - 左边的列表会列出所有标注，可自由添加或删除
 
@@ -1147,9 +1149,9 @@ GIS 要素类型中的多部件面在 `AutoCAD` 中没有直接的对应图元�
 
 **标注性能**
 
-- 修改标注或通过 `STYLE` 命令修改字体后，标注内容可能未及时更新，此时通过 `REGEN` 命令重新生成即可；
-- 标注是动态计算的，数据量特别大的话，`REGEN` 命令重生成可能有一定卡顿，可根据数据量酌情使用；
-- 从效率出发，标注建议使用 `SHX` 字体，在出图或有必要时再切换为 `TrueType` 字体（如宋体）；
+- 修改标注或通过 `STYLE` 命令修改字体后，标注内容可能未及时更新，此时可通过 `REGEN` 命令重新生成；
+- 标注是动态计算的，数据量大的话，`REGEN` 命令重生成可能有一定卡顿，可根据数据量酌情使用；
+- 出于效率考虑，标注建议使用 `SHX` 字体，在出图或有必要时再切换为 `TrueType` 字体（如宋体）；
 
 ### 长度注记<a id="长度注记"></a>
 
@@ -1199,7 +1201,7 @@ GIS 要素类型中的多部件面在 `AutoCAD` 中没有直接的对应图元�
 
 命令 `GQJT`，高清截图是对打印功能的补充，可将目标区域输出为高清图片，支持批量截取，好处是方便快捷，所见即所得。
 
-![image-20230711112024776](C:\LeoCode\HtCadTool\HelpMd\assets\image-20230711112024776.png)
+![image](./assets/0高清截图.png)
 
 - 分辨率以像素为单位，有三种模式：
 
@@ -1221,7 +1223,7 @@ GIS 要素类型中的多部件面在 `AutoCAD` 中没有直接的对应图元�
 
 - 白色透明：输出图片的白色部分将自动透明处理。
 
-- 保存PDF：将输出的图片转为PDF。
+- 保存PDF：将输出的图片转为 PDF。
 
 - 截取到剪切板：将截图到剪切板而非文件，方便直接粘贴使用（该设置对批量模式无效）。
 
@@ -1229,14 +1231,14 @@ GIS 要素类型中的多部件面在 `AutoCAD` 中没有直接的对应图元�
 
 - 截图方式共有三种：
 
-  - 截原色图：该模式将直接截取和CAD窗口所见效果一致的图片。
+  - 截原色图：该模式将直接截取和 CAD 窗口所见效果一致的图片。
   - 截指定底色：按照设置的底色来改变背景色并截图。
   - 截灰度图：按照设置的底色来改变背景色，并截取灰度图。
 
 - 注意事项
 
-  > - 理论上支持最大5亿像素截图，实际使用受限于CAD版本、设备内存等，过高的像素可能会导致内存溢出，且截取效率较低，请酌情使用。
-  > - 若实在需要获取超大的图片，可使用打印工具打印为PDF后，再转换为图片，矢量格式的PDF转为图片同样高清。
+  > - 理论上支持最大5亿像素截图，实际使用受限于 CAD 版本、设备内存等，过高的像素可能会导致内存溢出，且截取效率较低，请酌情使用。
+  > - 若实在需要获取超大的图片，可使用打印工具打印为 PDF 后，再转换为图片，矢量格式的 PDF 转为图片同样高清。
   > - 高清截图仅支持模型空间
 
 ### 合并拆分<a id="合并拆分"></a>
@@ -1281,11 +1283,11 @@ GIS 要素类型中的多部件面在 `AutoCAD` 中没有直接的对应图元�
 
 命令：`LIC`
 
-![image-20230710143638594](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230710143638594.png)
+![image](./assets/0授权管理.png)
 
 **关于<a id="关于"></a>**
 
 命令：`SINFO`，显示当前的版本信息，若有新版本也会提示更新。
 
-![image-20230710143602284](C:\LeoCode\HtCadTool\HelpMd\assets/image-20230710143602284.png)
+![image](./assets/0关于.png)
 
