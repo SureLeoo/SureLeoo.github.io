@@ -1,5 +1,5 @@
 ## 简介<a id="简介"></a>
-![image](.\assets\安装界面.png)
+![image](\assets\安装界面.png)
 
 `SpatialBox For AutoCAD` 是一款基于 AutoCAD 的 GIS 扩展插件，围绕数据格式转换、属性管理、空间拓扑、栅格扩展等方面，系统性增强 AutoCAD 的地理数据处理能力。
 
